@@ -11,8 +11,11 @@ public class Q3 {
 
 	public static void main(String[] args) {
 		try {
-			String s = readTxtFile(new File("D:/workspace18/examdemo/src/travelsky/exam/text.txt"));
+			String s = readTxtFile(new File("D:/eclipselunaworkspace/workspace18/Demo/examdemo/src/travelsky/exam/text.txt"));
 			String[] split = s.split(" ");
+			System.out.println(split[0]);
+			System.out.println(split[0].matches("^[0-9a-zA-Z_]+"));
+			System.out.println("abc".matches("^[0-9a-zA-Z_]+"));
 			String resultString = "";
 			for (String string : split) {
 				String regex = "[\u4e00-\u9fa5]*";
@@ -28,7 +31,7 @@ public class Q3 {
 		}
 
 	}
-
+	
 	public static String readTxtFile(File fileName) throws IOException {
 		String result = "";
 		FileReader fileReader = new FileReader(fileName);

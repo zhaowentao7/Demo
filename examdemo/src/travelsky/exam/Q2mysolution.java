@@ -16,6 +16,7 @@ public class Q2mysolution {
 			int num1 = scanner.nextInt();
 			System.out.println("请输入数字2");
 			int num2 = scanner.nextInt();
+			scanner.close();
 
 			int bigger = (num1 > num2 ? num1 : num2);
 			System.out.println("较大的数是" + bigger);
